@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Print</title>
+    </head>
+    <body>
+        Submitted Details:
+        <input type="button" name="btnShow" value="Show Data" onclick="javascript:showData();"/>
+        First Name:<label id="iblFirstName"></label>
+
+        Welcome<span id="fullName"></span>! Your address is <span id="address"></span>
+        <script>
+            function showData()
+            {
+                alert("test");
+                var firstname=localStorage.getItem('firstName');
+                var lastname=localStorage.getItem('lastName');
+                var address=localStorage.getItem('address');
+                console.log(firstname);
+                document.getElementById('fullName').innerHTML=firstname+" "+lastname;
+                document.getElementById('address').innerHTML=address;
+                document.getElementById('iblFirstName').innerHTML=firstname;
+            }
+        </script>
+
+    </body>
+</html>

@@ -2,7 +2,142 @@
     <head>
         <body>
             <a href="index.html"title="Goto Home page">Back to Home</a>
-            <h2 style="color : blue;">**Search for Flights**</h2>
+            <br>
+            <br> 
+            <center><h3>Register here :</h3>
+           <form action="print.html" method="post">
+                <table cell spacing ="6" cell padding="2">
+                    <tr>
+                        <td>
+                            <label for="title">Title</label>
+                        </td>
+                        <td>
+                            <select>
+                            id ="title" name="title" multiple>
+                            <option value="1"selected>Mr.</option>
+                            <option value="2">Mrs.</option>
+                            <option value="3"selected>Ms.</option>
+                        </select>
+                        </td>
+                    </tr>
+                <tr>
+                    <td>
+                        <label for="firstName"> First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id ="firstName" name="firstName" placeholder="Your First Name">
+                    </td>
+                </tr>
+                <td>
+                    <label for="LastName"> Last Name:</label>
+                </td>
+                <td>
+                    <input type="text" id ="lastName" name="lastName" placeholder="Your Last Name">
+                </td>
+            </tr>
+                <tr>
+                    <td> 
+                        <label for ="address">Address:</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address" placeholder="Your Address" rows="6" cols="20"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="title">City</label>
+                    </td>
+                    <td>
+                        <select>
+                            id ="city" name="city"multiple>
+                            <option value="1"selected>Ernakulam</option>
+                            <option value="2">Thrissur</option>
+                            <option value="3"selected>Kottayam</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob"> DOB:</label>
+                    </td>
+                    <td>
+                        <input type="date" id="dob" placeholder="Your Date of Birth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender"> Gender:</label>
+                    </td>
+                    <td>
+                        <input type="radio" id " id ="male" name="gender" value="1"/>Male
+                        <input type="radio" id " id ="female" name="gender" value="2"/>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="photo">Photo Upload</label>
+                    </td>
+                    <td>
+                        <input type="file" id="photoFile" name="photoFile" accept="image/*,*.pdf">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for ="mobile">Mobile:</label>
+                    </td>
+                    <td>
+                        <input type="text" id ="mobile" name="mobile" placeholder="Your Mobile No"> 
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <label for ="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="text" id ="email" name="email" placeholder="Your Email ID"> 
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Can we contact you?"> Can we contact you?:</label>
+                    </td>
+                    <td>
+                        <input type="radio" id  id ="Yes" name="option" value="1"/>Yes
+                        <input type="radio" id  id ="No" name="option" value="2"/>No
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" onclick="javascript:saveData();" id ="submit" name="submit" value="Submit"/>
+                    </td>
+                    <td>
+                        <input type="reset" id =" Reset" name="reset" value="Reset"/>
+                    </td>
+                </tr>
+            </table>
+                    
+                        <input type="checkbox"  id ="checkbox" name="checkbox" value="1"/>I agree to the <a href="tc.html"title="Terms and Condition">terms and conditions</a> of the website 
+                    
+                     
+                      
+            
+            </form>
+                <script>
+                    function saveData()
+                    {
+                        var firstname=document.getElementById('firstName').value;
+                        var lastname=document.getElementById('lastName').value;
+                        var address=document.getElementById('address').value;
+                        localStorage.setItem('firstName',firstname);
+                        localStorage.setItem('lastName',lastname);
+                        localStorage.setItem('address',address);
+                    }
+                </script>
+            </form>
+<br>
+<br>
+<br>
+                <h2 style="color : blue;">**Search for Flights**</h2>
             <img src="https://us.123rf.com/450wm/deimosz/deimosz1502/deimosz150200661/36531597-blue-circle-shiny-style-flight-booking-icon-sticker-or-label-isolated-on-white-background.jpg?ver=6"width="1300" height="500" />
             <table cellspacing="10" cellpadding="10" border="2">
                 <tr>
@@ -27,8 +162,9 @@
 
                 </tr>
             </table>
-            
-          
+            </center>
+           
+
         </body>
     </head>
 </html>
